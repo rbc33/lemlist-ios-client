@@ -8,10 +8,34 @@ struct Campaign: Identifiable, Decodable, Hashable {
     let hasError: Bool?
     let errors: [String]?
     let labels: [String]?
+    /// lemlist keeps `status` as whatever it was before archiving (usually
+    /// "draft") and sets this separate flag instead of using a "archived"
+    /// status value, despite what the docs' status enum implies.
+    let archived: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case name, status, createdAt, hasError, errors, labels
+        case name, status, createdAt, hasError, errors, labels, archived
+    }
+
+    /// What should actually be shown in the UI: folds the separate
+    /// `archived` flag into the status shown to the user.
+    var effectiveStatus: CampaignStatus {
+        archived == true ? .archived : status
+    }
+}
+
+/// GET /campaigns actually returns `{ "campaigns": [...], "pagination": {...} }`,
+/// not a bare array as lemlist's own docs example shows.
+struct CampaignsListResponse: Decodable {
+    let campaigns: [FailableDecodable<Campaign>]
+    let pagination: Pagination?
+
+    struct Pagination: Decodable {
+        let totalRecords: Int?
+        let currentPage: Int?
+        let nextPage: Int?
+        let totalPage: Int?
     }
 }
 

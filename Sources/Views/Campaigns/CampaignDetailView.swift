@@ -13,8 +13,8 @@ struct CampaignDetailView: View {
         List {
             Section {
                 LabeledContent("Estado") {
-                    Label(campaign.status.displayName, systemImage: campaign.status.systemImage)
-                        .foregroundStyle(campaign.status.tint)
+                    Label(campaign.effectiveStatus.displayName, systemImage: campaign.effectiveStatus.systemImage)
+                        .foregroundStyle(campaign.effectiveStatus.tint)
                 }
                 if let createdAt = campaign.createdAt {
                     LabeledContent("Creada", value: createdAt.formatted(date: .abbreviated, time: .omitted))
@@ -46,7 +46,7 @@ struct CampaignDetailView: View {
                 }
             }
 
-            if campaign.status == .running || campaign.status == .paused {
+            if campaign.archived != true, campaign.status == .running || campaign.status == .paused {
                 Section {
                     Button {
                         Task { await toggle() }
@@ -107,10 +107,10 @@ struct CampaignDetailView: View {
         do {
             if campaign.status == .running {
                 try await LemlistAPIClient.shared.pauseCampaign(id: campaign.id)
-                campaign = Campaign(id: campaign.id, name: campaign.name, status: .paused, createdAt: campaign.createdAt, hasError: campaign.hasError, errors: campaign.errors, labels: campaign.labels)
+                campaign = Campaign(id: campaign.id, name: campaign.name, status: .paused, createdAt: campaign.createdAt, hasError: campaign.hasError, errors: campaign.errors, labels: campaign.labels, archived: campaign.archived)
             } else {
                 try await LemlistAPIClient.shared.startCampaign(id: campaign.id)
-                campaign = Campaign(id: campaign.id, name: campaign.name, status: .running, createdAt: campaign.createdAt, hasError: campaign.hasError, errors: campaign.errors, labels: campaign.labels)
+                campaign = Campaign(id: campaign.id, name: campaign.name, status: .running, createdAt: campaign.createdAt, hasError: campaign.hasError, errors: campaign.errors, labels: campaign.labels, archived: campaign.archived)
             }
         } catch {
             toggleError = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription

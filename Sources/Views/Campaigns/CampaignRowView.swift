@@ -5,8 +5,8 @@ struct CampaignRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: campaign.status.systemImage)
-                .foregroundStyle(campaign.status.tint)
+            Image(systemName: campaign.effectiveStatus.systemImage)
+                .foregroundStyle(campaign.effectiveStatus.tint)
                 .font(.title3)
                 .frame(width: 28)
 
@@ -16,9 +16,9 @@ struct CampaignRowView: View {
                     .lineLimit(1)
 
                 HStack(spacing: 6) {
-                    Text(campaign.status.displayName)
+                    Text(campaign.effectiveStatus.displayName)
                         .font(.caption)
-                        .foregroundStyle(campaign.status.tint)
+                        .foregroundStyle(campaign.effectiveStatus.tint)
 
                     if campaign.hasError == true {
                         Text("· errores")

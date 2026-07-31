@@ -102,14 +102,27 @@ actor LemlistAPIClient {
     // MARK: - Campaigns
 
     /// GET /campaigns — the `version=v2` query param is required per lemlist's docs.
+    /// Note: despite the docs showing a bare array as the response, the API
+    /// actually returns `{ "campaigns": [...], "pagination": {...} }` —
+    /// verified against a live response.
     func fetchCampaigns(status: CampaignStatus? = nil) async throws -> [Campaign] {
-        var query = [
-            URLQueryItem(name: "version", value: "v2"),
-            URLQueryItem(name: "limit", value: "100")
-        ]
-        if let status { query.append(URLQueryItem(name: "status", value: status.rawValue)) }
-        let wrapped: [FailableDecodable<Campaign>] = try await request(path: "campaigns", query: query)
-        return wrapped.compactMap(\.base)
+        var allCampaigns: [Campaign] = []
+        var page = 1
+        while true {
+            var query = [
+                URLQueryItem(name: "version", value: "v2"),
+                URLQueryItem(name: "limit", value: "100"),
+                URLQueryItem(name: "page", value: String(page))
+            ]
+            if let status { query.append(URLQueryItem(name: "status", value: status.rawValue)) }
+
+            let response: CampaignsListResponse = try await request(path: "campaigns", query: query)
+            allCampaigns.append(contentsOf: response.campaigns.compactMap(\.base))
+
+            guard let totalPage = response.pagination?.totalPage, page < totalPage, page < 20 else { break }
+            page += 1
+        }
+        return allCampaigns
     }
 
     func pauseCampaign(id: String) async throws {

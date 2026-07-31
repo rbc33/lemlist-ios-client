@@ -11,7 +11,7 @@ struct CampaignsListView: View {
 
     private var filteredCampaigns: [Campaign] {
         guard let statusFilter else { return campaigns }
-        return campaigns.filter { $0.status == statusFilter }
+        return campaigns.filter { $0.effectiveStatus == statusFilter }
     }
 
     var body: some View {
@@ -65,20 +65,22 @@ struct CampaignsListView: View {
                     CampaignRowView(campaign: campaign)
                 }
                 .swipeActions(edge: .trailing) {
-                    if campaign.status == .running {
-                        Button {
-                            Task { await toggle(campaign) }
-                        } label: {
-                            Label("Pausar", systemImage: "pause.fill")
+                    if campaign.archived != true {
+                        if campaign.status == .running {
+                            Button {
+                                Task { await toggle(campaign) }
+                            } label: {
+                                Label("Pausar", systemImage: "pause.fill")
+                            }
+                            .tint(.orange)
+                        } else if campaign.status == .paused {
+                            Button {
+                                Task { await toggle(campaign) }
+                            } label: {
+                                Label("Reanudar", systemImage: "play.fill")
+                            }
+                            .tint(.green)
                         }
-                        .tint(.orange)
-                    } else if campaign.status == .paused {
-                        Button {
-                            Task { await toggle(campaign) }
-                        } label: {
-                            Label("Reanudar", systemImage: "play.fill")
-                        }
-                        .tint(.green)
                     }
                 }
             }
