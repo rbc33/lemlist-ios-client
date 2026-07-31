@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00D567E0E90B8CED11143185 /* MailboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DCE3737C3161301AB8F05 /* MailboxRowView.swift */; };
+		0A9C5C2A805B8AB64CFD7894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F9282F05E7C9CD734539C6 /* SettingsView.swift */; };
+		0B0EBEE21BF7AEF176598372 /* LemlistAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */; };
+		20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074FCFE55656A99AF7AA894 /* APIError.swift */; };
+		29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */; };
+		332D19FDF2B57ACE688F4B9D /* LemPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */; };
+		398172AF1B191C258CA8AFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D11A78E7D01C143D45BA87 /* Assets.xcassets */; };
+		3A2B557A694D054920614DDF /* LemwarmSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */; };
+		4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03A9A521B390596FB375BE8 /* AppSettings.swift */; };
+		4615A5E7BCB7663381EC6665 /* MailboxDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57FE4AA08E4B6EF42E145 /* MailboxDetailView.swift */; };
+		4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */; };
+		57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06534C4BA260C6F630716F35 /* FailableDecodable.swift */; };
+		68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB3F8D5E516AACD64716B1 /* ContentView.swift */; };
+		9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */; };
+		ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B35A75EACB0B6B56096F /* MailboxesListView.swift */; };
+		BFA6C8C64D09447395DA615E /* Mailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCA098257186CA3796868F /* Mailbox.swift */; };
+		C8F5289035D8CE88E0A07C48 /* CampaignStatusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */; };
+		D56603ED3F57816E488A7705 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503CA3436BF6C38AD5EE62A /* Team.swift */; };
+		D74CBBE77C57DB6F639B4BA8 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */; };
+		DBF0F6F28C4F1A195BD50884 /* StatusViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */; };
+		EF9DBBE7A72F109ACD8ECAB8 /* CampaignStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF43FA96B11B6F4A829461D /* CampaignStats.swift */; };
+		F771345BB83E6EE555F3941E /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520919B015C3CE7F9027027F /* KeychainStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsListView.swift; sourceTree = "<group>"; };
+		06534C4BA260C6F630716F35 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
+		26F9282F05E7C9CD734539C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		342B6CCCFFE0DFC708C70B27 /* LemPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LemPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A57FE4AA08E4B6EF42E145 /* MailboxDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxDetailView.swift; sourceTree = "<group>"; };
+		4A3DCE3737C3161301AB8F05 /* MailboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxRowView.swift; sourceTree = "<group>"; };
+		4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignRowView.swift; sourceTree = "<group>"; };
+		520919B015C3CE7F9027027F /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		52DCA098257186CA3796868F /* Mailbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailbox.swift; sourceTree = "<group>"; };
+		60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemwarmSettings.swift; sourceTree = "<group>"; };
+		65D11A78E7D01C143D45BA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemPulseApp.swift; sourceTree = "<group>"; };
+		75DB3F8D5E516AACD64716B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
+		89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemlistAPIClient.swift; sourceTree = "<group>"; };
+		9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatusStyle.swift; sourceTree = "<group>"; };
+		B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailView.swift; sourceTree = "<group>"; };
+		C03A9A521B390596FB375BE8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		CBF43FA96B11B6F4A829461D /* CampaignStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStats.swift; sourceTree = "<group>"; };
+		D503CA3436BF6C38AD5EE62A /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		E074FCFE55656A99AF7AA894 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F334B35A75EACB0B6B56096F /* MailboxesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxesListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0D5C3AAE6F401DCF7AEF9144 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				26F9282F05E7C9CD734539C6 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0D603B57FFDB54325E6F2C05 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E074FCFE55656A99AF7AA894 /* APIError.swift */,
+				06534C4BA260C6F630716F35 /* FailableDecodable.swift */,
+				520919B015C3CE7F9027027F /* KeychainStore.swift */,
+				89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		361E11A094C8805F72615C51 /* Campaigns */ = {
+			isa = PBXGroup;
+			children = (
+				B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */,
+				4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */,
+				064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */,
+			);
+			path = Campaigns;
+			sourceTree = "<group>";
+		};
+		3A6F419DC7FA68A87D81740D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75DB3F8D5E516AACD64716B1 /* ContentView.swift */,
+				361E11A094C8805F72615C51 /* Campaigns */,
+				5545B619BF46402EB26D3575 /* Mailboxes */,
+				0D5C3AAE6F401DCF7AEF9144 /* Settings */,
+				C8496B069A4DE98489917AED /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5545B619BF46402EB26D3575 /* Mailboxes */ = {
+			isa = PBXGroup;
+			children = (
+				45A57FE4AA08E4B6EF42E145 /* MailboxDetailView.swift */,
+				F334B35A75EACB0B6B56096F /* MailboxesListView.swift */,
+				4A3DCE3737C3161301AB8F05 /* MailboxRowView.swift */,
+			);
+			path = Mailboxes;
+			sourceTree = "<group>";
+		};
+		7FF59F43AC3771AA31C21492 = {
+			isa = PBXGroup;
+			children = (
+				DC081A37A7F11B199B5E9742 /* Sources */,
+				F3DA81D21FB9B4BE795FAB82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87DC3A069B1F3AFD28F82418 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65D11A78E7D01C143D45BA87 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9E031CA2AA1E86E60247CE8E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C03A9A521B390596FB375BE8 /* AppSettings.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C37DC0EA2B0919E1F6EC23F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */,
+				CBF43FA96B11B6F4A829461D /* CampaignStats.swift */,
+				60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */,
+				52DCA098257186CA3796868F /* Mailbox.swift */,
+				D503CA3436BF6C38AD5EE62A /* Team.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C8496B069A4DE98489917AED /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */,
+				7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DC081A37A7F11B199B5E9742 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */,
+				9E031CA2AA1E86E60247CE8E /* App */,
+				C37DC0EA2B0919E1F6EC23F6 /* Models */,
+				0D603B57FFDB54325E6F2C05 /* Networking */,
+				87DC3A069B1F3AFD28F82418 /* Resources */,
+				3A6F419DC7FA68A87D81740D /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F3DA81D21FB9B4BE795FAB82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				342B6CCCFFE0DFC708C70B27 /* LemPulse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"TEMP_9FCE9B4B-BEC2-448D-A9EE-61B8C1EE26E1" /* {Models,Networking,App,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "{Models,Networking,App,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_E0CE8B58-ECC6-4D57-B0B2-6ED4452DF73F" /* Campaigns,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Campaigns,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_F044C22A-74FD-4947-A817-1B78C430C92F" /* Mailboxes,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Mailboxes,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_FDECA27A-7BC6-4E4B-A65B-58C06F9EB1E5" /* Shared,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Shared,Views";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD3AD2C3E4FC5AADF2B699F9 /* LemPulse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AAC8DDE4D18D4C47172883 /* Build configuration list for PBXNativeTarget "LemPulse" */;
+			buildPhases = (
+				FA62907E0C0AC2DF625FD56E /* Sources */,
+				8818E959B51335253606CC7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemPulse;
+			packageProductDependencies = (
+			);
+			productName = LemPulse;
+			productReference = 342B6CCCFFE0DFC708C70B27 /* LemPulse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0791CF5F2166968812069017 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BD3AD2C3E4FC5AADF2B699F9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C91B28DA048D5149F52F2178 /* Build configuration list for PBXProject "LemPulse" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7FF59F43AC3771AA31C21492;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F3DA81D21FB9B4BE795FAB82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD3AD2C3E4FC5AADF2B699F9 /* LemPulse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8818E959B51335253606CC7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				398172AF1B191C258CA8AFED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA62907E0C0AC2DF625FD56E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */,
+				4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */,
+				D74CBBE77C57DB6F639B4BA8 /* Campaign.swift in Sources */,
+				9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */,
+				4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */,
+				EF9DBBE7A72F109ACD8ECAB8 /* CampaignStats.swift in Sources */,
+				C8F5289035D8CE88E0A07C48 /* CampaignStatusStyle.swift in Sources */,
+				29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */,
+				68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */,
+				57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */,
+				F771345BB83E6EE555F3941E /* KeychainStore.swift in Sources */,
+				332D19FDF2B57ACE688F4B9D /* LemPulseApp.swift in Sources */,
+				0B0EBEE21BF7AEF176598372 /* LemlistAPIClient.swift in Sources */,
+				3A2B557A694D054920614DDF /* LemwarmSettings.swift in Sources */,
+				BFA6C8C64D09447395DA615E /* Mailbox.swift in Sources */,
+				4615A5E7BCB7663381EC6665 /* MailboxDetailView.swift in Sources */,
+				00D567E0E90B8CED11143185 /* MailboxRowView.swift in Sources */,
+				ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */,
+				0A9C5C2A805B8AB64CFD7894 /* SettingsView.swift in Sources */,
+				DBF0F6F28C4F1A195BD50884 /* StatusViews.swift in Sources */,
+				D56603ED3F57816E488A7705 /* Team.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		60F0122C8BE89D7CF5D9B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AECED722228A3625B3E31F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CF3DCA5E09A2EC003C3F7FF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbc33.lempulse;
+				PRODUCT_NAME = LemPulse;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA6C27AD0802463E19BBD4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbc33.lempulse;
+				PRODUCT_NAME = LemPulse;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37AAC8DDE4D18D4C47172883 /* Build configuration list for PBXNativeTarget "LemPulse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF3DCA5E09A2EC003C3F7FF1 /* Debug */,
+				EA6C27AD0802463E19BBD4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C91B28DA048D5149F52F2178 /* Build configuration list for PBXProject "LemPulse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECED722228A3625B3E31F82 /* Debug */,
+				60F0122C8BE89D7CF5D9B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0791CF5F2166968812069017 /* Project object */;
+}

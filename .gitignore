@@ -2,3 +2,4 @@ Payload/
 *.ipa
 Generated/
 DerivedData/
+*.sh

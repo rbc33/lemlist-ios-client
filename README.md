@@ -63,4 +63,3 @@ Sources/
     Settings/                 — pantalla de Ajustes con la API key
     Shared/                   — vistas de estado vacío/error reutilizables
 ```
-# lemlist-ios-client
