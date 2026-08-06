@@ -195,28 +195,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_234FDC69-B873-4192-B8CC-368360941C20" /* Mailboxes,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Mailboxes,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_44CF3F60-A40D-4093-9BB9-F08512767027" /* Campaigns,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Campaigns,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_7F8B0CD5-FFB2-468E-A692-DA973F683692" /* {Models,Networking,App,Views */ = {
+		"TEMP_1A872D16-672E-4F4B-9960-6F1E36FF4FF0" /* {Models,Networking,App,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "{Models,Networking,App,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_CF23538B-8879-4408-89FD-564DFE0A9D8A" /* Shared,Views */ = {
+		"TEMP_5A6BE095-CCD6-4D77-BC09-057523F5BF0D" /* Campaigns,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Campaigns,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_74504186-08E8-4D38-A0BC-57CCFDB4EB8A" /* Mailboxes,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Mailboxes,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_A8716071-DF50-4525-A26F-2FC2854B9F39" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
