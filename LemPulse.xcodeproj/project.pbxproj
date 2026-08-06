@@ -22,7 +22,6 @@
 		4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */; };
 		57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06534C4BA260C6F630716F35 /* FailableDecodable.swift */; };
 		68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB3F8D5E516AACD64716B1 /* ContentView.swift */; };
-		9C7DAC1D18F16A882BF61A48 /* BuildingReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */; };
 		9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */; };
 		ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B35A75EACB0B6B56096F /* MailboxesListView.swift */; };
 		BFA6C8C64D09447395DA615E /* Mailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCA098257186CA3796868F /* Mailbox.swift */; };
@@ -53,7 +52,6 @@
 		65D8316201FC6C95F377F796 /* VecyReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyReview.swift; sourceTree = "<group>"; };
 		75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemPulseApp.swift; sourceTree = "<group>"; };
 		75DB3F8D5E516AACD64716B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingReviewsView.swift; sourceTree = "<group>"; };
 		7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
 		89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemlistAPIClient.swift; sourceTree = "<group>"; };
 		8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyAPIClient.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 		078DCD5F482AD2957683F7DC /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
-				76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */,
 				0A8B92D533C73748FDE28EEA /* ReviewsView.swift */,
 			);
 			path = Reviews;
@@ -198,32 +195,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_47B0CB7A-19FA-4470-AFDE-F99B47986766" /* Mailboxes,Views */ = {
+		"TEMP_34403FE9-64DB-47BD-9555-89659322B958" /* Mailboxes,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Mailboxes,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_99228795-315E-4742-934A-A10767E25ABF" /* Campaigns,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Campaigns,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_CFDFB507-EB35-4996-B236-05E46C1A6B10" /* Shared,Views */ = {
+		"TEMP_3B4BD27E-6813-4706-82A3-DA51A2AF70A2" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Shared,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_EAA50A2D-B218-4FD2-8D77-67F140F41376" /* {Models,Networking,App,Views */ = {
+		"TEMP_62F87FBD-4E38-4CC8-B077-6862BCA87AF3" /* {Models,Networking,App,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "{Models,Networking,App,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_F773866F-D163-4227-AA6B-E581892D3223" /* Campaigns,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Campaigns,Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +295,6 @@
 			files = (
 				20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */,
 				4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */,
-				9C7DAC1D18F16A882BF61A48 /* BuildingReviewsView.swift in Sources */,
 				D74CBBE77C57DB6F639B4BA8 /* Campaign.swift in Sources */,
 				9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */,
 				4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */,
