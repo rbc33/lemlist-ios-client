@@ -195,32 +195,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_34403FE9-64DB-47BD-9555-89659322B958" /* Mailboxes,Views */ = {
+		"TEMP_234FDC69-B873-4192-B8CC-368360941C20" /* Mailboxes,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Mailboxes,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_3B4BD27E-6813-4706-82A3-DA51A2AF70A2" /* Shared,Views */ = {
+		"TEMP_44CF3F60-A40D-4093-9BB9-F08512767027" /* Campaigns,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Shared,Views";
+			path = "Campaigns,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_62F87FBD-4E38-4CC8-B077-6862BCA87AF3" /* {Models,Networking,App,Views */ = {
+		"TEMP_7F8B0CD5-FFB2-468E-A692-DA973F683692" /* {Models,Networking,App,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "{Models,Networking,App,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_F773866F-D163-4227-AA6B-E581892D3223" /* Campaigns,Views */ = {
+		"TEMP_CF23538B-8879-4408-89FD-564DFE0A9D8A" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Campaigns,Views";
+			path = "Shared,Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
