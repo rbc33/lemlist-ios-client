@@ -10,9 +10,11 @@
 		00D567E0E90B8CED11143185 /* MailboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DCE3737C3161301AB8F05 /* MailboxRowView.swift */; };
 		0A9C5C2A805B8AB64CFD7894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F9282F05E7C9CD734539C6 /* SettingsView.swift */; };
 		0B0EBEE21BF7AEF176598372 /* LemlistAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */; };
+		1487948DB896B49246C5DDBD /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B92D533C73748FDE28EEA /* ReviewsView.swift */; };
 		20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074FCFE55656A99AF7AA894 /* APIError.swift */; };
 		29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */; };
 		332D19FDF2B57ACE688F4B9D /* LemPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */; };
+		35583002CFDB0A4ADA367224 /* VecyReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D8316201FC6C95F377F796 /* VecyReview.swift */; };
 		398172AF1B191C258CA8AFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D11A78E7D01C143D45BA87 /* Assets.xcassets */; };
 		3A2B557A694D054920614DDF /* LemwarmSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */; };
 		4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03A9A521B390596FB375BE8 /* AppSettings.swift */; };
@@ -20,12 +22,15 @@
 		4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */; };
 		57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06534C4BA260C6F630716F35 /* FailableDecodable.swift */; };
 		68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB3F8D5E516AACD64716B1 /* ContentView.swift */; };
+		9C7DAC1D18F16A882BF61A48 /* BuildingReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */; };
 		9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */; };
 		ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B35A75EACB0B6B56096F /* MailboxesListView.swift */; };
 		BFA6C8C64D09447395DA615E /* Mailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCA098257186CA3796868F /* Mailbox.swift */; };
+		C2EC95AD9B97B259DEB667E3 /* VecyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */; };
 		C8F5289035D8CE88E0A07C48 /* CampaignStatusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */; };
 		D56603ED3F57816E488A7705 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503CA3436BF6C38AD5EE62A /* Team.swift */; };
 		D74CBBE77C57DB6F639B4BA8 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */; };
+		DBA6DE9E1F9C64FF7E9A8C10 /* VecyReviewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50877C2BA104FCD6903D24C /* VecyReviewsStore.swift */; };
 		DBF0F6F28C4F1A195BD50884 /* StatusViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */; };
 		EF9DBBE7A72F109ACD8ECAB8 /* CampaignStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF43FA96B11B6F4A829461D /* CampaignStats.swift */; };
 		F771345BB83E6EE555F3941E /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520919B015C3CE7F9027027F /* KeychainStore.swift */; };
@@ -34,6 +39,7 @@
 /* Begin PBXFileReference section */
 		064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsListView.swift; sourceTree = "<group>"; };
 		06534C4BA260C6F630716F35 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
+		0A8B92D533C73748FDE28EEA /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		26F9282F05E7C9CD734539C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		342B6CCCFFE0DFC708C70B27 /* LemPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LemPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,12 +50,16 @@
 		52DCA098257186CA3796868F /* Mailbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailbox.swift; sourceTree = "<group>"; };
 		60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemwarmSettings.swift; sourceTree = "<group>"; };
 		65D11A78E7D01C143D45BA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65D8316201FC6C95F377F796 /* VecyReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyReview.swift; sourceTree = "<group>"; };
 		75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemPulseApp.swift; sourceTree = "<group>"; };
 		75DB3F8D5E516AACD64716B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingReviewsView.swift; sourceTree = "<group>"; };
 		7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
 		89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemlistAPIClient.swift; sourceTree = "<group>"; };
+		8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyAPIClient.swift; sourceTree = "<group>"; };
 		9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatusStyle.swift; sourceTree = "<group>"; };
 		B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailView.swift; sourceTree = "<group>"; };
+		B50877C2BA104FCD6903D24C /* VecyReviewsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyReviewsStore.swift; sourceTree = "<group>"; };
 		C03A9A521B390596FB375BE8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		CBF43FA96B11B6F4A829461D /* CampaignStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStats.swift; sourceTree = "<group>"; };
 		D503CA3436BF6C38AD5EE62A /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -58,6 +68,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		078DCD5F482AD2957683F7DC /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				76D72720C14B6C460EBE51E9 /* BuildingReviewsView.swift */,
+				0A8B92D533C73748FDE28EEA /* ReviewsView.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
 		0D5C3AAE6F401DCF7AEF9144 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +92,8 @@
 				06534C4BA260C6F630716F35 /* FailableDecodable.swift */,
 				520919B015C3CE7F9027027F /* KeychainStore.swift */,
 				89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */,
+				8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */,
+				B50877C2BA104FCD6903D24C /* VecyReviewsStore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -93,6 +114,7 @@
 				75DB3F8D5E516AACD64716B1 /* ContentView.swift */,
 				361E11A094C8805F72615C51 /* Campaigns */,
 				5545B619BF46402EB26D3575 /* Mailboxes */,
+				078DCD5F482AD2957683F7DC /* Reviews */,
 				0D5C3AAE6F401DCF7AEF9144 /* Settings */,
 				C8496B069A4DE98489917AED /* Shared */,
 			);
@@ -141,6 +163,7 @@
 				60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */,
 				52DCA098257186CA3796868F /* Mailbox.swift */,
 				D503CA3436BF6C38AD5EE62A /* Team.swift */,
+				65D8316201FC6C95F377F796 /* VecyReview.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,32 +198,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_9FCE9B4B-BEC2-448D-A9EE-61B8C1EE26E1" /* {Models,Networking,App,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "{Models,Networking,App,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_E0CE8B58-ECC6-4D57-B0B2-6ED4452DF73F" /* Campaigns,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Campaigns,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_F044C22A-74FD-4947-A817-1B78C430C92F" /* Mailboxes,Views */ = {
+		"TEMP_47B0CB7A-19FA-4470-AFDE-F99B47986766" /* Mailboxes,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Mailboxes,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_FDECA27A-7BC6-4E4B-A65B-58C06F9EB1E5" /* Shared,Views */ = {
+		"TEMP_99228795-315E-4742-934A-A10767E25ABF" /* Campaigns,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Campaigns,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_CFDFB507-EB35-4996-B236-05E46C1A6B10" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Shared,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_EAA50A2D-B218-4FD2-8D77-67F140F41376" /* {Models,Networking,App,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "{Models,Networking,App,Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +298,7 @@
 			files = (
 				20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */,
 				4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */,
+				9C7DAC1D18F16A882BF61A48 /* BuildingReviewsView.swift in Sources */,
 				D74CBBE77C57DB6F639B4BA8 /* Campaign.swift in Sources */,
 				9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */,
 				4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */,
@@ -291,9 +315,13 @@
 				4615A5E7BCB7663381EC6665 /* MailboxDetailView.swift in Sources */,
 				00D567E0E90B8CED11143185 /* MailboxRowView.swift in Sources */,
 				ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */,
+				1487948DB896B49246C5DDBD /* ReviewsView.swift in Sources */,
 				0A9C5C2A805B8AB64CFD7894 /* SettingsView.swift in Sources */,
 				DBF0F6F28C4F1A195BD50884 /* StatusViews.swift in Sources */,
 				D56603ED3F57816E488A7705 /* Team.swift in Sources */,
+				C2EC95AD9B97B259DEB667E3 /* VecyAPIClient.swift in Sources */,
+				35583002CFDB0A4ADA367224 /* VecyReview.swift in Sources */,
+				DBA6DE9E1F9C64FF7E9A8C10 /* VecyReviewsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

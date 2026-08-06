@@ -9,6 +9,9 @@ struct ContentView: View {
             MailboxesListView()
                 .tabItem { Label("Correos", systemImage: "envelope") }
 
+            ReviewsView()
+                .tabItem { Label("Reseñas", systemImage: "star.bubble") }
+
             SettingsView()
                 .tabItem { Label("Ajustes", systemImage: "gearshape") }
         }
