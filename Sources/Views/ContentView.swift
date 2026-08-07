@@ -6,6 +6,9 @@ struct ContentView: View {
             CampaignsListView()
                 .tabItem { Label("Campañas", systemImage: "megaphone") }
 
+            InboxRepliesListView()
+                .tabItem { Label("Bandeja", systemImage: "tray.full") }
+
             MailboxesListView()
                 .tabItem { Label("Correos", systemImage: "envelope") }
 

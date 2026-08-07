@@ -1,8 +1,9 @@
 import SwiftUI
 
 struct ReviewsView: View {
-    @State private var totalCount = 0
-    @State private var newSinceLastCheck: Int?
+    /// Only auto-refresh on open if the last recorded entry is older than this.
+    private static let minimumAutoRefreshInterval: TimeInterval = 24 * 60 * 60
+
     @State private var history: [VecyReviewHistoryEntry] = []
     @State private var isLoading = false
     @State private var errorMessage: String?
@@ -12,7 +13,17 @@ struct ReviewsView: View {
         NavigationStack {
             content
                 .navigationTitle("Reseñas")
-                .task { await load() }
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            Task { await refreshAndRecord() }
+                        } label: {
+                            Label("Refrescar", systemImage: "arrow.clockwise")
+                        }
+                        .disabled(isLoading)
+                    }
+                }
+                .task { await loadOnAppear() }
         }
     }
 
@@ -21,22 +32,28 @@ struct ReviewsView: View {
         if isLoading && !hasLoadedOnce {
             ProgressView("Cargando reseñas…")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-        } else if let errorMessage {
-            RetryableErrorView(message: errorMessage) { await load() }
+        } else if let errorMessage, history.isEmpty {
+            RetryableErrorView(message: errorMessage) { await refreshAndRecord() }
         } else {
             List {
                 Section("Total de reseñas") {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("\(totalCount)")
+                        Text("\(latestEntry?.count ?? 0)")
                             .font(.system(size: 44, weight: .bold, design: .rounded))
 
-                        if let newSinceLastCheck, newSinceLastCheck > 0 {
-                            Label("\(newSinceLastCheck) nueva\(newSinceLastCheck == 1 ? "" : "s") desde la última vez", systemImage: "sparkles")
+                        if let latestDelta, latestDelta > 0 {
+                            Label("\(latestDelta) nueva\(latestDelta == 1 ? "" : "s") desde el último registro", systemImage: "sparkles")
                                 .font(.subheadline)
                                 .foregroundStyle(.green)
-                        } else if newSinceLastCheck != nil {
-                            Text("Sin novedades desde la última vez")
+                        } else if latestDelta != nil {
+                            Text("Sin novedades desde el último registro")
                                 .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
+
+                        if let latestEntry {
+                            Text("Actualizado \(latestEntry.date.formatted(.relative(presentation: .named)))")
+                                .font(.caption)
                                 .foregroundStyle(.secondary)
                         }
                     }
@@ -71,7 +88,7 @@ struct ReviewsView: View {
                 }
             }
             .listStyle(.plain)
-            .refreshable { await load() }
+            .refreshable { await refreshAndRecord() }
         }
     }
 
@@ -85,16 +102,31 @@ struct ReviewsView: View {
         }
     }
 
-    /// Only calls GET /resenas/contador — deliberately does NOT fetch the
-    /// full /resenas endpoint (buildings + nested reviews), which is far
-    /// heavier and unnecessary just to track a running total.
-    private func load() async {
+    private var latestEntry: VecyReviewHistoryEntry? { historyRows.first?.entry }
+    private var latestDelta: Int? { historyRows.first?.delta }
+
+    /// Called every time the tab appears. Only hits the network (and only
+    /// records a new history point) if the last recorded entry is missing
+    /// or older than 24h — otherwise just shows what's already saved
+    /// locally, so opening the tab repeatedly doesn't spam the history.
+    private func loadOnAppear() async {
+        history = VecyReviewsStore.history
+        if let last = history.max(by: { $0.date < $1.date }),
+           Date().timeIntervalSince(last.date) < Self.minimumAutoRefreshInterval {
+            hasLoadedOnce = true
+            return
+        }
+        await refreshAndRecord()
+    }
+
+    /// Always hits GET /resenas/contador and always records the result —
+    /// used by the refresh button, pull-to-refresh, and the 24h auto-check.
+    private func refreshAndRecord() async {
         isLoading = true
         errorMessage = nil
         do {
             let total = try await VecyAPIClient.shared.fetchTotalCount()
-            totalCount = total
-            newSinceLastCheck = VecyReviewsStore.recordVisit(count: total)
+            VecyReviewsStore.recordVisit(count: total)
             history = VecyReviewsStore.history
             hasLoadedOnce = true
         } catch {

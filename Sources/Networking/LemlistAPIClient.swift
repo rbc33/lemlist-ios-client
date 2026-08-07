@@ -201,10 +201,80 @@ actor LemlistAPIClient {
         let _: OKResponse = try await request(path: "lemwarm/\(mailboxId)/start", method: "POST")
     }
 
+    // MARK: - Inbox
+
+    /// GET /activities?type=emailsReplied — verified live via curl to return
+    /// a bare array (not wrapped like /campaigns), with enough lead/contact
+    /// context to build a list without extra calls per row.
+    func fetchRecentReplies(limit: Int = 30) async throws -> [InboxReplyActivity] {
+        let query = [
+            URLQueryItem(name: "type", value: "emailsReplied"),
+            URLQueryItem(name: "limit", value: String(limit))
+        ]
+        let wrapped: [FailableDecodable<InboxReplyActivity>] = try await request(path: "activities", query: query)
+        return wrapped.compactMap(\.base)
+    }
+
+    // MARK: - Inbox
+
+    /// GET /inbox/{contactId} — the full message thread with a contact.
+    /// markAsRead=true also clears the conversation's unread state in lemlist.
+    func fetchThread(contactId: String, userId: String? = nil) async throws -> [InboxMessage] {
+        var query = [URLQueryItem(name: "markAsRead", value: "true")]
+        
+        // Si el userId viene informado (desde la vista detalle), lo metemos en la query.
+        // Si no viene (desde vistas viejas o previews), no rompe la compilación.
+        if let userId = userId, !userId.isEmpty {
+            query.append(URLQueryItem(name: "userId", value: userId))
+        }
+        
+        let response: InboxMessagesResponse = try await request(
+            path: "inbox/\(contactId)",
+            query: query
+        )
+        return response.data.compactMap(\.base)
+    }
+
+    /// POST /inbox/email — sends a reply within the thread. Passing
+    /// replyToActivityId "latest" keeps it threaded (In-Reply-To) and reuses
+    /// the thread's subject/CC, so callers only need the message body plus
+    /// whichever sender identity the thread was using.
+    func sendReply(
+        contactId: String,
+        sendUserId: String,
+        sendUserEmail: String,
+        sendUserMailboxId: String,
+        message: String
+    ) async throws {
+        let body = try encoder.encode(SendReplyBody(
+            sendUserId: sendUserId,
+            sendUserEmail: sendUserEmail,
+            sendUserMailboxId: sendUserMailboxId,
+            contactId: contactId,
+            message: message,
+            replyToActivityId: "latest"
+        ))
+        let _: SendReplyResponse = try await request(path: "inbox/email", method: "POST", body: body)
+    }
+
     // MARK: - Connection test
 
     @discardableResult
     func testConnection() async throws -> TeamInfo {
         try await fetchTeam()
     }
+}
+
+private struct SendReplyBody: Encodable {
+    let sendUserId: String
+    let sendUserEmail: String
+    let sendUserMailboxId: String
+    let contactId: String
+    let message: String
+    let replyToActivityId: String
+}
+
+private struct SendReplyResponse: Decodable {
+    let ok: Bool?
+    let contactId: String?
 }

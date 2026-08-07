@@ -10,6 +10,7 @@
 		00D567E0E90B8CED11143185 /* MailboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DCE3737C3161301AB8F05 /* MailboxRowView.swift */; };
 		0A9C5C2A805B8AB64CFD7894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F9282F05E7C9CD734539C6 /* SettingsView.swift */; };
 		0B0EBEE21BF7AEF176598372 /* LemlistAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */; };
+		0B308B3C9920C0019DBDFCFD /* HTMLPlainText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6338CC38FCE2383DB985600 /* HTMLPlainText.swift */; };
 		1487948DB896B49246C5DDBD /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B92D533C73748FDE28EEA /* ReviewsView.swift */; };
 		20BAFE98969341F8E4C608D7 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E074FCFE55656A99AF7AA894 /* APIError.swift */; };
 		29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */; };
@@ -20,10 +21,13 @@
 		4446D10CB05CBD7ADD2188B1 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03A9A521B390596FB375BE8 /* AppSettings.swift */; };
 		4615A5E7BCB7663381EC6665 /* MailboxDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A57FE4AA08E4B6EF42E145 /* MailboxDetailView.swift */; };
 		4B635AF7A720049365ACAD9C /* CampaignRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1FCF87712B78615EAA1BEC /* CampaignRowView.swift */; };
+		4F53D50F6FCB6CD70495EC0C /* InboxRepliesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237EA9A8B7BD131750E9E81A /* InboxRepliesListView.swift */; };
 		57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06534C4BA260C6F630716F35 /* FailableDecodable.swift */; };
+		5A97E97F1E1354DAA6E6E9BF /* InboxReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0DDD5C5F02A25FABCD4F3 /* InboxReply.swift */; };
 		68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB3F8D5E516AACD64716B1 /* ContentView.swift */; };
 		9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */; };
 		ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B35A75EACB0B6B56096F /* MailboxesListView.swift */; };
+		B52130F3A1A94DB138C8E259 /* InboxThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC9ED3F80AC8E098B087481 /* InboxThreadView.swift */; };
 		BFA6C8C64D09447395DA615E /* Mailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCA098257186CA3796868F /* Mailbox.swift */; };
 		C2EC95AD9B97B259DEB667E3 /* VecyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */; };
 		C8F5289035D8CE88E0A07C48 /* CampaignStatusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */; };
@@ -39,6 +43,7 @@
 		064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsListView.swift; sourceTree = "<group>"; };
 		06534C4BA260C6F630716F35 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
 		0A8B92D533C73748FDE28EEA /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		237EA9A8B7BD131750E9E81A /* InboxRepliesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRepliesListView.swift; sourceTree = "<group>"; };
 		26F9282F05E7C9CD734539C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		342B6CCCFFE0DFC708C70B27 /* LemPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LemPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +58,8 @@
 		75A49E28B5FEF2075EA0FE90 /* LemPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemPulseApp.swift; sourceTree = "<group>"; };
 		75DB3F8D5E516AACD64716B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
+		7DC9ED3F80AC8E098B087481 /* InboxThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxThreadView.swift; sourceTree = "<group>"; };
+		7EB0DDD5C5F02A25FABCD4F3 /* InboxReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxReply.swift; sourceTree = "<group>"; };
 		89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemlistAPIClient.swift; sourceTree = "<group>"; };
 		8BB8616349F7BAC715372DF7 /* VecyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VecyAPIClient.swift; sourceTree = "<group>"; };
 		9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignStatusStyle.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 		D503CA3436BF6C38AD5EE62A /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		E074FCFE55656A99AF7AA894 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F334B35A75EACB0B6B56096F /* MailboxesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxesListView.swift; sourceTree = "<group>"; };
+		F6338CC38FCE2383DB985600 /* HTMLPlainText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLPlainText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -110,6 +118,7 @@
 			children = (
 				75DB3F8D5E516AACD64716B1 /* ContentView.swift */,
 				361E11A094C8805F72615C51 /* Campaigns */,
+				D6747406B76635FD2115FF7D /* Inbox */,
 				5545B619BF46402EB26D3575 /* Mailboxes */,
 				078DCD5F482AD2957683F7DC /* Reviews */,
 				0D5C3AAE6F401DCF7AEF9144 /* Settings */,
@@ -157,6 +166,7 @@
 			children = (
 				2E3ED45EE6EA0A74D7E6010B /* Campaign.swift */,
 				CBF43FA96B11B6F4A829461D /* CampaignStats.swift */,
+				7EB0DDD5C5F02A25FABCD4F3 /* InboxReply.swift */,
 				60CA2F1288EA6606DF5FF597 /* LemwarmSettings.swift */,
 				52DCA098257186CA3796868F /* Mailbox.swift */,
 				D503CA3436BF6C38AD5EE62A /* Team.swift */,
@@ -169,9 +179,19 @@
 			isa = PBXGroup;
 			children = (
 				9880D99754E32B4CB953409E /* CampaignStatusStyle.swift */,
+				F6338CC38FCE2383DB985600 /* HTMLPlainText.swift */,
 				7D68D6D2F5ABBE924CE86CAE /* StatusViews.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		D6747406B76635FD2115FF7D /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				237EA9A8B7BD131750E9E81A /* InboxRepliesListView.swift */,
+				7DC9ED3F80AC8E098B087481 /* InboxThreadView.swift */,
+			);
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 		DC081A37A7F11B199B5E9742 /* Sources */ = {
@@ -195,32 +215,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_1A872D16-672E-4F4B-9960-6F1E36FF4FF0" /* {Models,Networking,App,Views */ = {
+		"TEMP_650AE6A9-9510-427E-ABAA-5E8C47C19252" /* {Models,Networking,App,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "{Models,Networking,App,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_5A6BE095-CCD6-4D77-BC09-057523F5BF0D" /* Campaigns,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Campaigns,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_74504186-08E8-4D38-A0BC-57CCFDB4EB8A" /* Mailboxes,Views */ = {
+		"TEMP_B451CAD4-9503-43E5-B021-69F4B1D7957D" /* Mailboxes,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Mailboxes,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_A8716071-DF50-4525-A26F-2FC2854B9F39" /* Shared,Views */ = {
+		"TEMP_BD2EFFDB-7D6A-4F5D-B6E6-43229945C6AD" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Shared,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_CF9E4829-BB40-4AFD-8BCA-BEE58FE404F9" /* Campaigns,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Campaigns,Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +323,10 @@
 				29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */,
 				68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */,
 				57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */,
+				0B308B3C9920C0019DBDFCFD /* HTMLPlainText.swift in Sources */,
+				4F53D50F6FCB6CD70495EC0C /* InboxRepliesListView.swift in Sources */,
+				5A97E97F1E1354DAA6E6E9BF /* InboxReply.swift in Sources */,
+				B52130F3A1A94DB138C8E259 /* InboxThreadView.swift in Sources */,
 				F771345BB83E6EE555F3941E /* KeychainStore.swift in Sources */,
 				332D19FDF2B57ACE688F4B9D /* LemPulseApp.swift in Sources */,
 				0B0EBEE21BF7AEF176598372 /* LemlistAPIClient.swift in Sources */,
