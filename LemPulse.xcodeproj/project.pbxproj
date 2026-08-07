@@ -25,6 +25,7 @@
 		57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06534C4BA260C6F630716F35 /* FailableDecodable.swift */; };
 		5A97E97F1E1354DAA6E6E9BF /* InboxReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0DDD5C5F02A25FABCD4F3 /* InboxReply.swift */; };
 		68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DB3F8D5E516AACD64716B1 /* ContentView.swift */; };
+		6F5681C9FBC6A0FA04F7C223 /* CurrentUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922F09FF6F1A29734138FFA /* CurrentUserStore.swift */; };
 		9D423DDEE09771725B581D9A /* CampaignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32679CFCE632D2C7F645707 /* CampaignDetailView.swift */; };
 		ABC66E104DD5B98C73605BC9 /* MailboxesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F334B35A75EACB0B6B56096F /* MailboxesListView.swift */; };
 		B52130F3A1A94DB138C8E259 /* InboxThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC9ED3F80AC8E098B087481 /* InboxThreadView.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		064C40E09E3BDCFC4359B38F /* CampaignsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignsListView.swift; sourceTree = "<group>"; };
 		06534C4BA260C6F630716F35 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
+		0922F09FF6F1A29734138FFA /* CurrentUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserStore.swift; sourceTree = "<group>"; };
 		0A8B92D533C73748FDE28EEA /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		237EA9A8B7BD131750E9E81A /* InboxRepliesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRepliesListView.swift; sourceTree = "<group>"; };
 		26F9282F05E7C9CD734539C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				E074FCFE55656A99AF7AA894 /* APIError.swift */,
+				0922F09FF6F1A29734138FFA /* CurrentUserStore.swift */,
 				06534C4BA260C6F630716F35 /* FailableDecodable.swift */,
 				520919B015C3CE7F9027027F /* KeychainStore.swift */,
 				89AA8E70E703A9422CBAF0C0 /* LemlistAPIClient.swift */,
@@ -215,32 +218,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		"TEMP_650AE6A9-9510-427E-ABAA-5E8C47C19252" /* {Models,Networking,App,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "{Models,Networking,App,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_B451CAD4-9503-43E5-B021-69F4B1D7957D" /* Mailboxes,Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Mailboxes,Views";
-			sourceTree = "<group>";
-		};
-		"TEMP_BD2EFFDB-7D6A-4F5D-B6E6-43229945C6AD" /* Shared,Views */ = {
+		"TEMP_1561F1D0-E28A-4838-8228-A0D2BF0EAA49" /* Shared,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Shared,Views";
 			sourceTree = "<group>";
 		};
-		"TEMP_CF9E4829-BB40-4AFD-8BCA-BEE58FE404F9" /* Campaigns,Views */ = {
+		"TEMP_3A556D27-C06B-4F84-967D-9BE63163C506" /* Mailboxes,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Mailboxes,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_41750241-4D11-4585-B16B-E256A153016A" /* Campaigns,Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Campaigns,Views";
+			sourceTree = "<group>";
+		};
+		"TEMP_D92CE0EA-B4CF-4A55-9B2A-6EE69A4B7ADC" /* {Models,Networking,App,Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "{Models,Networking,App,Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +325,7 @@
 				C8F5289035D8CE88E0A07C48 /* CampaignStatusStyle.swift in Sources */,
 				29934F911562831454D1F9A8 /* CampaignsListView.swift in Sources */,
 				68B50B62677BD66CE8F04ADD /* ContentView.swift in Sources */,
+				6F5681C9FBC6A0FA04F7C223 /* CurrentUserStore.swift in Sources */,
 				57A8A554E3B8AFD81F5C63C9 /* FailableDecodable.swift in Sources */,
 				0B308B3C9920C0019DBDFCFD /* HTMLPlainText.swift in Sources */,
 				4F53D50F6FCB6CD70495EC0C /* InboxRepliesListView.swift in Sources */,

@@ -6,6 +6,9 @@ struct SettingsView: View {
     @State private var apiKeyInput: String = ""
     @State private var isTesting = false
     @State private var testResult: TestResult?
+    @State private var teamMembers: [TeamMember] = []
+    @State private var isLoadingMembers = false
+    @State private var membersError: String?
 
     private enum TestResult {
         case success(String)
@@ -58,6 +61,52 @@ struct SettingsView: View {
                     }
                 }
 
+                if settings.hasAPIKey {
+                    Section {
+                        if let name = settings.currentUserDisplayName {
+                            LabeledContent("Usando como", value: name)
+                        }
+                        Button {
+                            Task { await loadTeamMembers() }
+                        } label: {
+                            HStack {
+                                Text(settings.currentUserId == nil ? "Elegir quién eres" : "Cambiar usuario")
+                                Spacer()
+                                if isLoadingMembers { ProgressView() }
+                            }
+                        }
+                        .disabled(isLoadingMembers)
+
+                        if !teamMembers.isEmpty {
+                            ForEach(teamMembers) { member in
+                                Button {
+                                    CurrentUserStore.set(userId: member.userId, displayName: member.displayName)
+                                    settings.refresh()
+                                    teamMembers = []
+                                } label: {
+                                    HStack {
+                                        Text(member.displayName)
+                                        Spacer()
+                                        if member.userId == settings.currentUserId {
+                                            Image(systemName: "checkmark")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if let membersError {
+                            Text(membersError)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    } header: {
+                        Text("Tu usuario")
+                    } footer: {
+                        Text("Se usa para marcar las conversaciones de la Bandeja como leídas en tu nombre. Si no lo eliges, se usa el remitente original de cada campaña como aproximación.")
+                    }
+                }
+
                 Section("Acerca de") {
                     LabeledContent("App", value: "LemPulse")
                     Link("Documentación de la API de lemlist", destination: URL(string: "https://developer.lemlist.com")!)
@@ -95,5 +144,20 @@ struct SettingsView: View {
         } catch {
             testResult = .failure((error as? LocalizedError)?.errorDescription ?? error.localizedDescription)
         }
+    }
+
+    private func loadTeamMembers() async {
+        isLoadingMembers = true
+        membersError = nil
+        do {
+            let team = try await LemlistAPIClient.shared.fetchTeam()
+            teamMembers = team.users ?? []
+            if teamMembers.isEmpty {
+                membersError = "No se encontraron usuarios en el equipo."
+            }
+        } catch {
+            membersError = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
+        }
+        isLoadingMembers = false
     }
 }

@@ -89,8 +89,10 @@ struct InboxThreadView: View {
         isLoading = true
         errorMessage = nil
         do {
-            // Obtenemos el userId directamente desde el reply que se inyectó a la vista
-            let userId = reply.sendUserId
+            // Prioriza quién está usando la app ahora mismo (elegido en Ajustes);
+            // si no se ha elegido nadie, usa el remitente original de la
+            // campaña como aproximación razonable.
+            let userId = CurrentUserStore.userId ?? reply.sendUserId
             messages = try await LemlistAPIClient.shared.fetchThread(contactId: reply.contactId, userId: userId)
         } catch {
             errorMessage = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
