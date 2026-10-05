@@ -31,11 +31,31 @@ struct Mailbox: Codable, Identifiable, Hashable {
 
     var warmupActive: Bool { lemwarm?.active ?? false }
 
-    var isConnected: Bool { (status ?? "").uppercased() == "CONNECTED" }
+    /// Verified live: healthy mailboxes report status "OK". "CONNECTED" is
+    /// kept as a fallback in case lemlist's docs value ever shows up.
+    var isConnected: Bool {
+        let value = (status ?? "").uppercased()
+        return value == "OK" || value == "CONNECTED"
+    }
 }
 
 struct MailboxLemlistSettings: Codable, Hashable {
     let emailLimit: Int?
+
+    enum CodingKeys: String, CodingKey { case emailLimit }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        // Verified live: lemlist returns this as a string ("50") for SMTP
+        // mailboxes but as a number (200) for Google ones. Accept both.
+        if let intValue = try? container.decode(Int.self, forKey: .emailLimit) {
+            emailLimit = intValue
+        } else if let stringValue = try? container.decode(String.self, forKey: .emailLimit) {
+            emailLimit = Int(stringValue)
+        } else {
+            emailLimit = nil
+        }
+    }
 }
 
 struct MailboxLemwarmFlag: Codable, Hashable {
